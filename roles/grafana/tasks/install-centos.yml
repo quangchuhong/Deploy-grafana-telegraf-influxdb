@@ -1,0 +1,30 @@
+---
+- name: Enable Yum repository
+  yum_repository:
+    name: grafana
+    description: Grafana upstream yum repo
+    baseurl: https://packages.grafana.com/oss/rpm
+    gpgcheck: yes
+    gpgkey: https://packages.grafana.com/gpg.key
+  tags: install-grafana
+
+- name: Import RPM key
+  rpm_key:
+    key: https://packages.grafana.com/gpg.key
+    state: present
+  tags: install-grafana
+
+- name: Install grafana packages
+  yum:
+    name: grafana
+    state: latest
+  notify:
+  	- "restart grafana"
+  tags: install-grafana
+
+- name: Enable and (re)start service
+  service:
+    name: grafana-server
+    enabled: yes
+    state: restarted
+  tags: install-grafana
