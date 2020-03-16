@@ -6,7 +6,6 @@
           name: "{{ item }}"
           state: present
           update_cache: yes
-          cache_valid_time: 3600 
   with_items:
           - python-httplib2
           - python-apt 
@@ -18,8 +17,6 @@
   apt:
           name: "{{ item }}"
           state: present
-          update_cache: yes
-          cache_valid_time: 3600
   with_items:
           - python-pip
   when: influxdb_install_python_client
@@ -43,11 +40,9 @@
   apt:
           name: influxdb
           state: latest
-          update_cache: yes
-          cache_valid_time: 3600
   when: influxdb_install_url is not defined or influxdb_install_url == None
   notify:
-  	- "restart influxdb"
+      - restart influxdb
   tags: install-influxdb
 
 - name: Download InfluxDB package via URL [Debian/Ubuntu]
@@ -61,7 +56,7 @@
     state: present
   when: influxdb_install_url is defined and influxdb_install_url != None
   notify:
-  	- "restart influxdb"
+      - restart influxdb
   tags: install-influxdb
 
 

@@ -15,7 +15,7 @@
     update_cache: yes
   when: telegraf_install_url is not defined or telegraf_install_url == None
   notify:
-  	- "restart telegraf"
+      - restart telegraf
   tags: install-telegraf
 
 - name: Install Telegraf from URL [RHEL/CentOS]
@@ -24,6 +24,6 @@
     state: present
   when: telegraf_install_url is defined and telegraf_install_url != None
   notify:
-  	- "restart telegraf"
+      - restart telegraf
   tags: install-telegraf
 

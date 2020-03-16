@@ -1,7 +1,7 @@
 [server-grafana]
 192.168.17.118	ansible_connection=ssh	ansible_user=quangch
 
-[vm-local]
+[centos7-server]
 192.168.17.95	ansible_connection=ssh	ansible_user=root
 
 

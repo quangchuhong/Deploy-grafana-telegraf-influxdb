@@ -20,7 +20,7 @@
 - name: install grafana
   apt: name=grafana state=latest
   notify:
-  	- "restart grafana"
+      - restart grafana
   tags: install-grafana
 
 - name: configure grafana server start at boot

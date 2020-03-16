@@ -19,7 +19,7 @@
     name: grafana
     state: latest
   notify:
-  	- "restart grafana"
+      - restart grafana
   tags: install-grafana
 
 - name: Enable and (re)start service
