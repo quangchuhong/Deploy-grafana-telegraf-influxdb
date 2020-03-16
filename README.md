@@ -1,8 +1,5 @@
-# ansible-grafana-telegraf-influxdb-tags-handers
+# Ansible-grafana-telegraf-influxdb-tags-handers
 Triển khai cài đặt ansible-tags-hander tool grafana monitor
-
-# Ansible-grafana-telegraf-influxdb
-Triển khai hệ thống monitor tool grafana
 
 # Cấu Trúc triển khai cài đặt hệ thống Monitor Grafana-Influxdb-Telegraf
 - Roles: Grafana - Telegraf - Influxdb.
