@@ -95,5 +95,11 @@ sudo ansible -i hosts -m ping all
 
   $ sudo ansible-playbook -i hosts site.yml --user quangch --ask-pass
 
+  $ sudo ansible-playbook -i hosts site.yml --tags install-telegraf
+  
+  $ sudo ansible-playbook -i hosts site.yml --tags install-grafana
+  
+  $ sudo ansible-playbook -i hosts site.yml --tags install-influxdb
+  
 
 
