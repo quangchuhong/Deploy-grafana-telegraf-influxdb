@@ -80,9 +80,13 @@ sudo ansible -i hosts -m ping all
 - Add ansible ssh key to Clients:
 
   $ ssh-keygen -t rsa
+  
   $ ssh-copy-id -i quangch@192.168.1.100
+  
   $ ssh quangch@192.168.1.100
+ 
   $ ssh-agent bash
+  
   $ ssh-add ~/.ssh/id_rsa
 
 3. Running file install tu Ansible host
