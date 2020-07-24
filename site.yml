@@ -1,14 +1,14 @@
 ---
 # install roles:
 
-- hosts: cen7-server
+- hosts: u16-server
   become: yes
   vars_files:
     - defaults/main.yml
     - vars/main.yml
 
   roles:
-    - grafana
-    - influxdb
+#    - grafana
+#    - influxdb
     - telegraf
 
