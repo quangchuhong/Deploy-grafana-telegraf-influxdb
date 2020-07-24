@@ -1,6 +1,6 @@
 ---
 # copy telegraf.conf to all hosts
-- hosts: all
+- hosts: cen7-server
   become: yes
   tasks:
   - name: copy telegraf conf all host
@@ -18,6 +18,6 @@
     service:
        name: telegraf
        state: restarted
-     tags: copy-telegraf-config
+    tags: copy-telegraf-config
 
 
