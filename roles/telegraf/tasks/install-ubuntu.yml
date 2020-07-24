@@ -3,14 +3,15 @@
 
 - name: install any dependencies on Debian
   apt:
-    name:
-       - python-httplib2
-       - python-apt
-       - curl
-       - apt-transport-https
+    name: "{{ item }}"
+    update_cache: true
     state: present
-    update_cache: yes
-    tags: install-telegraf
+  with_items:
+    - 'python-httplib2'
+    - 'python-apt'
+    - 'curl'
+    - 'apt-transport-https'
+  tags: install-telegraf
 
 - name: Import influxdata GPG key Debian
   apt_key: 
