@@ -1,7 +1,7 @@
 ---
 # install roles:
 
-- hosts: server-grafana
+- hosts: cen7-server
   become: yes
   vars_files:
     - defaults/main.yml
