@@ -1,7 +1,7 @@
 ---
 # install roles:
 
-- hosts: u16-server
+- hosts: all
   become: yes
   vars_files:
     - defaults/main.yml
@@ -10,5 +10,6 @@
   roles:
 #    - grafana
 #    - influxdb
-    - telegraf
+#    - telegraf
+    - iptables
 
