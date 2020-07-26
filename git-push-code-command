@@ -23,3 +23,5 @@ cd existing_repo
 git remote add origin https://gitlab.k8s.vn/quangch00/ansible-project04-flaskwebapp.git
 git push -u origin --all
 git push -u origin --tags
+
+token
