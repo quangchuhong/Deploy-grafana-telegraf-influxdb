@@ -12,12 +12,12 @@
       owner: telegraf
       group: telegraf
       mode: 0744
-    tags: copy-telegraf-config
+    tags: telegraf-copy
 
   - name: Restarted telegraf service
     service:
        name: telegraf
        state: restarted
-    tags: copy-telegraf-config
+    tags: telegraf-copy
 
 
