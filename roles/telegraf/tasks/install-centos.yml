@@ -36,8 +36,8 @@
     owner: telegraf
     group: telegraf
     mode: 0744
-    notify:
-      - restart telegraf
+  notify:
+    - restart telegraf
   tags: install-telegraf
 
 
