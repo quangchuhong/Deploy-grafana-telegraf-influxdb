@@ -31,10 +31,15 @@ Triển khai hệ thống monitor tool grafana
 # Config Firewall on server 
 
 - file firewall.bash: add rule iptables open port.
+
 - Create service "firewall" add to run /etc/firewall.bash.
+
 - Command: service firewall start | stop | status
+
 - iptables command check: iptables -L -n -v
+
 - Disable firewalld on centos, ufw on ubuntu.
+
 - Open port default: 22,80,443,3000,8086.
 
 
