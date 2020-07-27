@@ -13,10 +13,11 @@
     - iptables-Cen7                                           
 
 - name: Disable the firewalld service (on RHEL, if configured).
-  service:
+  systemd:
     name: firewalld
     state: stopped
-    enabled: false
+    enabled: no 
+    masked: no
   when:
     - firewall_disable_firewalld                                # bien firewall_disable_firewalld: false
     - firewalld_installed.rc == 0                               # retrun code 0 command tren thuc hien thanh cong, 1 failed.
@@ -28,7 +29,7 @@
     name: "{{ item }}"
     state: present
   with_items:
-    - iptables
+    - iptables-services
   tags:
     - iptables-Cen7
 
