@@ -18,9 +18,6 @@
     state: stopped
     enabled: no 
     masked: no
-  when:
-    - firewall_disable_firewalld                                # bien firewall_disable_firewalld: false
-    - firewalld_installed.rc == 0                               # retrun code 0 command tren thuc hien thanh cong, 1 failed.
   tags:
     - iptables-Cen7
 
