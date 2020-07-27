@@ -12,7 +12,7 @@ Triển khai hệ thống monitor tool grafana
 
 - File hosts: List ip server
 
-- Template: telegraf.conf.j2, firewall.bash.j2, iptables.sh. 
+- Template: telegraf.conf.j2, firewall.bash.j2, iptables.sh, telegraf_ping.conf, telegraf_snmp.conf, telegraf_window.conf.
 
 # Run Ansibles:
 
