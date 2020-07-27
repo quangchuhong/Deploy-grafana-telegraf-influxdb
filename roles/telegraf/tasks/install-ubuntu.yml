@@ -36,6 +36,20 @@
       - restart telegraf
   tags: install-telegraf
 
+- name: copy telegraf.conf
+  template:
+    src: telegraf.conf.j2
+    dest: /etc/telegraf/telegraf.conf
+    force: yes
+    backup: yes
+    owner: telegraf
+    group: telegraf
+    mode: 0744
+    notify:
+      - restart telegraf
+  tags: install-telegraf
+
+
 
 
 
