@@ -8,8 +8,8 @@
     - vars/main.yml
 
   roles:
-#    - grafana
-#    - influxdb
-#    - telegraf
+    - grafana
+    - influxdb
+    - telegraf
     - iptables
 
