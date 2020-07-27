@@ -35,6 +35,16 @@
   tags:
     - iptables-u1604
 
+- name: service iptables started
+  systemd:
+    name: iptables
+    state: started
+    enabled: yes
+  tags:
+    - iptables-u1604
+
+
+
 - name: Flush iptables the first time playbook runs.
   command: >
     iptables -F
