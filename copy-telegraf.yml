@@ -1,6 +1,6 @@
 ---
 # copy telegraf.conf to all hosts
-- hosts: cen7-server
+- hosts: u16-server
   become: yes
   tasks:
   - name: copy telegraf conf all host
