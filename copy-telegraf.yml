@@ -1,6 +1,6 @@
 ---
 # copy telegraf.conf to all hosts
-- hosts: all
+- hosts: u16-server
   become: yes
   tasks:
   - name: copy telegraf conf all host
@@ -24,10 +24,10 @@
       group: telegraf
       mode: 0744
     with_items:
-      - telegraf_ping.conf
-      - telegraf_snmp_bw.conf
-      - telegraf_snmp_sw_3750_2960.conf
-      - telegraf_window_server.conf
+#      - telegraf_ping.conf
+#      - telegraf_snmp_bw.conf
+#      - telegraf_snmp_sw_3750_2960.conf
+#      - telegraf_window_server.conf
     tags: telegraf-copy
 
 
